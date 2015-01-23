@@ -6,7 +6,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *     Laurent CARON (laurent.caron at gmail dot com) - initial API and implementation 
+ *     Laurent CARON (laurent.caron at gmail dot com) - initial API and implementation
  *******************************************************************************/
 package org.mihalis.opal.propertyTable;
 
@@ -37,7 +37,7 @@ import org.mihalis.opal.utils.SWTGraphicUtil;
 
 /**
  * This snippet demonstrates the PropertyTable widget
- * 
+ *
  */
 public class PropertyTableSnippet {
 
@@ -86,7 +86,7 @@ public class PropertyTableSnippet {
 
 	/**
 	 * Build a property table
-	 * 
+	 *
 	 * @param tabFolder tabFolder that holds the property table
 	 * @param showButton if <code>true</code>, show buttons
 	 * @param showAsCategory if <code>true</code>, show property as categories.
@@ -126,7 +126,7 @@ public class PropertyTableSnippet {
 		table.addProperty(new PTProperty("directory", "Directory", "Select a directory")).setCategory("Directory/File").setEditor(new PTDirectoryEditor());
 		table.addProperty(new PTProperty("file", "File", "Select a file")).setCategory("Directory/File").setEditor(new PTFileEditor());
 
-		table.addProperty(new PTProperty("comboReadOnly", "Combo (read-only)", "A simple combo with seasons")).setCategory("Combo").setEditor(new PTComboEditor(true, "Spring", "Summer", "Autumn", "Winter"));
+		table.addProperty(new PTProperty("comboReadOnly", "Combo (read-only)", "A simple combo with seasons")).setCategory("Combo").setEditor(new PTComboEditor(true, new Object[]{"Spring", "Summer", "Autumn", "Winter"}));
 		table.addProperty(new PTProperty("combo", "Combo", "A combo that is not read-only")).setCategory("Combo").setEditor(new PTComboEditor("Value 1", "Value 2", "Value 3"));
 
 		table.addProperty(new PTProperty("cb", "Checkbox", "A checkbox")).setCategory("Checkbox").setEditor(new PTCheckboxEditor()).setCategory("Checkbox");

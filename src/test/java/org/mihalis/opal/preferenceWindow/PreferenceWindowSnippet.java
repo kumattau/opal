@@ -6,7 +6,7 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *     Laurent CARON (laurent.caron at gmail dot com) - initial API and implementation 
+ *     Laurent CARON (laurent.caron at gmail dot com) - initial API and implementation
  *******************************************************************************/
 package org.mihalis.opal.preferenceWindow;
 
@@ -49,7 +49,7 @@ import org.mihalis.opal.utils.SWTGraphicUtil;
 
 /**
  * This snippet demonstrates the PreferenceWindow widget
- * 
+ *
  */
 public class PreferenceWindowSnippet {
 
@@ -86,7 +86,7 @@ public class PreferenceWindowSnippet {
 				createSystemTab(window);
 
 				window.setSelectedTab(2);
-				
+
 				window.open();
 			}
 		});
@@ -151,7 +151,7 @@ public class PreferenceWindowSnippet {
 		documentTab.add(new PWSeparator());
 
 		documentTab.add(new PWCombo("Combo (read-only):", "comboReadOnly", "Value 1", "Value 2", "Value 3"));
-		documentTab.add(new PWCombo("Combo (editable):", "combo", true, "Value 1", "Value 2", "Value 3"));
+		documentTab.add(new PWCombo("Combo (editable):", "combo", true, new Object[]{"Value 1", "Value 2", "Value 3"}));
 
 		documentTab.add(new PWSeparator("Titled separator"));
 		documentTab.add(new PWButton("First button", new SelectionAdapter() {
@@ -237,7 +237,7 @@ public class PreferenceWindowSnippet {
 
 		systemTab.add(new PWLabel("Rows..."));
 
-		systemTab.add(new PWRow().add(new PWCombo("Cache size", "cacheSize", true, "128", "256", "512", "1024")).//
+		systemTab.add(new PWRow().add(new PWCombo("Cache size", "cacheSize", true, new Object[]{"128", "256", "512", "1024"})).//
 				add(new PWCombo(null, "cacheSizeUnit", "Bytes", "Kilobytes", "Megabytes")));
 
 		systemTab.add(new PWRow().//
